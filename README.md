@@ -41,6 +41,23 @@ URDF Parser Links:
 |     DexHand     |                 [DexHand](https://www.dexhand.org/)                 |  [dexhand_description ](https://github.com/iotdesignshop/dexhand_description/blob/main/urdf/dexhand.urdf)   |               [Dexhand](https://github.com/TheRobotStudio/V1.0-Dexhand)                | CC BY-NC-SA 4.0 |
 |  Inspire Hand   |          [Inspire-Robot](https://www.inspire-robots.com/)           |                                                     N/A                                                     |             [inspire_hand](https://www.inspire-robots.com/download/frwz/)              | CC BY-NC-SA 4.0 |
 
+## Quick test your own model
+
+## Installation
+```shell
+conda create -n dex-urdf python=3.11 -y
+python -m pip install -r requirements.txt
+```
+
+## Test scripts
+```shell
+## Robot animation rendering 
+python tools/generate_urdf_animation_sapien.py ../robots/hands/kistar_hand/kistar_hand.urdf --output-video-path output/kistar_hand.mp4 --headless
+
+## Robot collision mesh rendering
+python tools/generate_urdf_collision_figure_sapien.py robots/hands/kistar_hand/kistar_hand.urdf --output-image-path output/kistar_hand.png --headless
+```
+
 ## Citation
 
 If you use dex_urdf in your work, please use the following citation:
@@ -57,8 +74,3 @@ If you use dex_urdf in your work, please use the following citation:
 This repository contains models derived from open-source contributions by various developers and manufactures.
 The development of dex_urdf was made possible thanks to the generous work of numerous designers and engineers.
 We extend our sincere appreciation to all those whose efforts have contributed to this project.
-
-## Test scripts
-```shell
-python tools/generate_urdf_animation_sapien.py ../robots/hands/kistar_hand/kistar_hand.urdf --output-video-path output/kistar_hand.mp4 --headless
-```
