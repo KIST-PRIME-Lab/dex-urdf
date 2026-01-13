@@ -21,5 +21,7 @@ else:
     for name, obj in scene.objects.items():
         obj.select_set(True)
         print(name)
-        bpy.ops.wm.usd_export(filepath=str(root_dir / f"{name}.usd"), selected_objects_only=True, export_armatures=False)
+        bpy.ops.wm.usd_export(
+            filepath=str(root_dir / f"{name}.usd"), selected_objects_only=True, export_armatures=False
+        )
         obj.select_set(False)

@@ -3,6 +3,7 @@ format.
 
 |   Robot Model   |                                                  Visual[^1]                                                  |                                                    Collision[^2]                                                    |
 |:---------------:|:------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------:|
+|  KISTAR Hand   | [<img src="doc/gallery/kistar_hand.webp" width="400">](robots/hands/kistar_hand/kistar_hand.urdf) | [<img src="doc/gallery/kistar_hand.png" width="400">](robots/hands/kistar_hand/kistar_hand.urdf)  |
 |  Allegro Hand   | [<img src="doc/gallery/allegro_rt.webp" width="400">](robots/hands/allegro_hand/allegro_hand_right_glb.urdf) | [<img src="doc/gallery/allegro-collision.png" width="400">](robots/hands/allegro_hand/allegro_hand_right_glb.urdf)  |
 |   Shadow Hand   |  [<img src="doc/gallery/shadow_rt.webp" width="400">](robots/hands/shadow_hand/shadow_hand_right_glb.urdf)   |   [<img src="doc/gallery/shadow-collision.png" width="400">](robots/hands/shadow_hand/shadow_hand_right_glb.urdf)   |
 | SCHUNK SVH Hand |  [<img src="doc/gallery/svh_rt.webp" width="400">](robots/hands/schunk_hand/schunk_svh_hand_right_glb.urdf)  | [<img src="doc/gallery/schunk-collision.png" width="400">](robots/hands/schunk_hand/schunk_svh_hand_right_glb.urdf) |
@@ -55,3 +56,8 @@ If you use dex_urdf in your work, please use the following citation:
 This repository contains models derived from open-source contributions by various developers and manufactures.
 The development of dex_urdf was made possible thanks to the generous work of numerous designers and engineers.
 We extend our sincere appreciation to all those whose efforts have contributed to this project.
+
+## Test scripts
+```shell
+python tools/generate_urdf_animation_sapien.py ../robots/hands/kistar_hand/kistar_hand.urdf --output-video-path output/kistar_hand.mp4 --headless
+```

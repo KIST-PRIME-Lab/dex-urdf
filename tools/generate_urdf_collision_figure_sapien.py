@@ -128,6 +128,8 @@ def render_urdf(urdf_path, fix_root, disable_self_collision, headless, output_im
         loader.scale = 1.5
     elif "panda" in urdf_path:
         loader.scale = 1.5
+    elif "kistar" in urdf_path:
+        loader.scale = 1.2
 
     robot_builder = loader.load_file_as_articulation_builder(urdf_path)
     if disable_self_collision:
@@ -156,6 +158,8 @@ def render_urdf(urdf_path, fix_root, disable_self_collision, headless, output_im
     elif "inspire" in urdf_path:
         robot.set_pose(sapien.Pose([0, 0, -0.15]))
     elif "panda" in urdf_path:
+        robot.set_pose(sapien.Pose([0, 0, -0.1]))
+    elif "kistar" in urdf_path:
         robot.set_pose(sapien.Pose([0, 0, -0.1]))
 
     # Robot visual

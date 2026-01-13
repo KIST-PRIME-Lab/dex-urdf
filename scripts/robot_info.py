@@ -8,6 +8,7 @@ ORIGINAL_ROBOT_NAME_MAP = {
     "leap": "hands/leap_hand/leap_hand_right_glb.urdf",
     "schunk": "hands/schunk_hand/schunk_svh_hand_right_glb.urdf",
     "shadow": "hands/shadow_hand/shadow_hand_right_glb.urdf",
+    "kistar": "hands/kistar_hand/kistar_hand.urdf",
 }
 
 VARIATION_ROBOT_NAME_MAP = {
